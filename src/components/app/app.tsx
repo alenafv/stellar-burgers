@@ -46,7 +46,7 @@ const App = () => {
         <Route
           path='/login'
           element={
-            <ProtectedRoute>
+            <ProtectedRoute onlyAuthorized={false}>
               <Login />
             </ProtectedRoute>
           }

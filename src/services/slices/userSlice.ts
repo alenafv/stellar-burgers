@@ -25,7 +25,7 @@ interface UserState {
 }
 
 // Начальное состояние
-const initialState: UserState = {
+export const initialState: UserState = {
   user: null,
   isAuthenticated: false,
   isAuthChecked: false,
@@ -114,7 +114,7 @@ export const fetchUserOrders = createAsyncThunk(
 );
 
 // Слайс пользователя
-const userSlice = createSlice({
+export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
