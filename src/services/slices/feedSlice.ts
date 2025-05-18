@@ -13,7 +13,7 @@ interface FeedState {
 }
 
 // Начальное состояние
-const initialState: FeedState = {
+export const initialState: FeedState = {
   orders: [],
   total: 0,
   totalToday: 0,
@@ -28,7 +28,7 @@ export const fetchFeedsData = createAsyncThunk<TOrdersData, void>(
 );
 
 // Слайс для ленты заказов
-const feedsSlice = createSlice({
+export const feedsSlice = createSlice({
   name: 'feeds',
   initialState,
   reducers: {},

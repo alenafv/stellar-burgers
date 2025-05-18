@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getOrderByNumberApi, getOrdersApi } from '@api';
-import { RootState } from '../store';
 import { TOrder } from '@utils-types';
 
 interface OrderState {
@@ -15,7 +14,7 @@ interface OrderState {
 }
 
 // Начальное состояние
-const initialState: OrderState = {
+export const initialState: OrderState = {
   order: null,
   name: '',
   success: false,
@@ -36,7 +35,7 @@ export const fetchOrderByNumber = createAsyncThunk<TOrder, number>(
 );
 
 // Слайс для заказов
-const orderSlice = createSlice({
+export const orderSlice = createSlice({
   name: 'orders',
   initialState,
   reducers: {},

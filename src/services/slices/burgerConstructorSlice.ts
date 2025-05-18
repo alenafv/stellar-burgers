@@ -19,7 +19,7 @@ interface BurgerConstructorState {
 }
 
 // Начальное состояние
-const initialState: BurgerConstructorState = {
+export const initialState: BurgerConstructorState = {
   bun: null,
   ingredients: [],
   orderRequest: false,

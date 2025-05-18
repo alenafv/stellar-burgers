@@ -10,7 +10,7 @@ interface IngredientsState {
 }
 
 // Начальное состояние
-const initialState: IngredientsState = {
+export const initialState: IngredientsState = {
   ingredients: [],
   loading: false,
   error: null
@@ -23,7 +23,7 @@ export const fetchIngredientsData = createAsyncThunk<TIngredient[], void>(
 );
 
 // Слайс для ингредиентов
-const ingredientsSlice = createSlice({
+export const ingredientsSlice = createSlice({
   name: 'ingredients',
   initialState,
   reducers: {},
